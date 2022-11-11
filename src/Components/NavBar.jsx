@@ -8,7 +8,7 @@ const NavBar = () => {
         <div className="navlinks-container">
       <NavLink
         style={({ isActive }) =>
-          isActive ? { color: "red" } : { color: "black" }
+          isActive ? { color: "green" } : { color: "black" }
         }
         to="/"
         className="navlink-btn"
@@ -16,9 +16,19 @@ const NavBar = () => {
         Home
       </NavLink>
 
+           <NavLink
+        style={({ isActive }) =>
+          isActive ? { color: "green" } : { color: "black" }
+        }
+        to="/404errortest"
+        className="navlink-btn"
+      >
+        Error 404
+      </NavLink>
+
       <NavLink
         style={({ isActive }) =>
-          isActive ? { color: "red" } : { color: "black" }
+          isActive ? { color: "green" } : { color: "black" }
         }
         to="/errorboundarytest"
         className="navlink-btn"
@@ -26,15 +36,7 @@ const NavBar = () => {
         ErrorBoundary
       </NavLink>
 
-      <NavLink
-        style={({ isActive }) =>
-          isActive ? { color: "red" } : { color: "black" }
-        }
-        to="/404errortest"
-        className="navlink-btn"
-      >
-        Error 404
-      </NavLink>
+     
       </div>
     </nav>
   );

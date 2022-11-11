@@ -1,0 +1,35 @@
+.errFallBack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 1rem;
+  
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 367px) {
+  .errFallBack {
+    height: 90vh;
+    overflow: hidden;
+  }
+
+  .container {
+    padding: 90px 50px;
+    gap: 2rem;
+  }
+};

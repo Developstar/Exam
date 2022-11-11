@@ -16,10 +16,12 @@ const ErrorPageTest = lazy(() => import("./ErrorPageTest/ErrorPageTest"));
 
 const ErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
-    <div>
-      {/* <p>error.message</p> */}
-      <p>An error occurred: {error.message}</p>
-      <button onClick={() => resetErrorBoundary}>Reset App</button>
+    <div role="alert" className="errFallBack">
+      <div className="container">
+        <h1 className="errFallBack_para" style={{ color: "red" }}>OOPs! Something went wrong</h1>
+        <pre >{error.message}</pre>
+        <button onClick={resetErrorBoundary}>Reset</button>
+      </div>
     </div>
   );
 };

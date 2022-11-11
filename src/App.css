@@ -6,11 +6,11 @@
 
 .App {
   text-align: center;
-/*   height: 100vh */
+
   
 }
 
-/* NavBar Styling... */
+
 
 .navlink-btn {
   margin: 20px;
@@ -137,6 +137,14 @@ p {
 /* Media Query... */
 
 @media (min-width: 320px) and (max-width: 768px) {
+
+  .homepage-container p{
+    font-size: 1.5rem;
+    
+  }
+  
+
+  
   .navbar-container {
     display: flex;
     flex-direction: column;
@@ -144,8 +152,14 @@ p {
 
   }
 
+  .navbar-container h3{
+    display: none;
+  }
+
   .navlinks-container {
     display: flex;
+    padding: 0.3rem 0rem;
+    
 
   }
 
@@ -158,10 +172,16 @@ p {
 
   .navlink-btn {
     margin: 0 auto;
+    font-size: 1rem;
   }
+  
+.counter-value{
+  font-size: 2px;
+}
 
   .counter-btn {
     width: 70%;
+    padding: 1rem;
 }
 
 
