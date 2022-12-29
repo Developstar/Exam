@@ -8,6 +8,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import { useNavigate } from "react-router-dom";
 
 
+
 const Home = lazy(() => import("./HomePage/Home"));
 const ErrorBoundaryTest = lazy(() =>
   import("./ErrorBoundaryTest/ErrorBoundaryTest")
@@ -20,7 +21,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }) => {
       <div className="container">
         <h1 className="errFallBack_para" style={{ color: "red" }}>OOPs! Something went wrong</h1>
         <pre >{error.message}</pre>
-        <button onClick={resetErrorBoundary}>Reset</button>
+        <button onClick={resetErrorBoundary}> Reset </button>
       </div>
     </div>
   );
