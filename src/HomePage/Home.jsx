@@ -18,6 +18,7 @@ const Home = () => {
         />
       </Helmet>
       <h1>Counter App</h1>
+      <p>Hello there, care to tell us your Age?</p>
       
       <CounterApp/>
     </section>
