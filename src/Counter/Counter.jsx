@@ -7,9 +7,9 @@ const CounterApp = () => {
   const [state, increment, decrement, reset, setValue, inputRef] = useCounter();
   return(
     <section className="counterapp-container">
- <p className="counter-value">Count: {state.count}</p>
+ <p className="counter-value">Age: {state.count}</p>
         <div>
-          <input ref={inputRef} type={"number"} placeholder={"Enter number here"} name="value"  className="counterapp-text" />
+          <input ref={inputRef} type={"number"} placeholder={"Enter your age here"} name="value"  className="counterapp-text" />
           
         </div>
         <div className="counterbtn-container">
