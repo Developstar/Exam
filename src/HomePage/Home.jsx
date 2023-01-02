@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import CounterApp from "../Counter/Counter";
 
 
+
 const Home = () => {
   return (
     <section className='homepage-container'>
@@ -18,7 +19,8 @@ const Home = () => {
         />
       </Helmet>
       <h1>Counter App</h1>
-      <p>Hello there, care to tell us your Age?</p>
+      <p>Enter your github username to fetch your repositories</p>
+      
       
       <CounterApp/>
     </section>
