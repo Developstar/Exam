@@ -10,10 +10,6 @@ const CounterApp = () => {
  
   return(
     <>
-     
-      <section>
-         <Gitinput/> 
-      </section>
     <section className="counterapp-container">
  <p className="counter-value">Numbers of Repositories you want to fetch: {state.count}</p>
         <div>
@@ -29,6 +25,9 @@ const CounterApp = () => {
       
       </section>
       <section>
+        <section>
+         <Gitinput/> 
+      </section>
         <div>
         <button  className="fetch-btn">Fetch Repo</button>
       </div>
