@@ -6,6 +6,7 @@ const useCounter = (initialState) => {
     const [state, dispatch] = useCounterReducer(initialState || { count: 0 });
 
     const inputRef = useRef(null);
+    const userinputRef = useRef()
 
     const increment = () => {
         dispatch({ type: "increment" });
@@ -32,7 +33,9 @@ const useCounter = (initialState) => {
         }
     };
 
-    return [state, increment, decrement, reset, setValue, inputRef];
+  
+
+    return [state, increment, decrement, reset, setValue, inputRef, userinputRef];
 }
 
 export default useCounter;

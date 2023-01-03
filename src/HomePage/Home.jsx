@@ -3,6 +3,7 @@ import CounterApp from "../Counter/Counter";
 
 
 
+
 const Home = () => {
   return (
     <section className='homepage-container'>
@@ -19,7 +20,7 @@ const Home = () => {
         />
       </Helmet>
       <h1>Counter App</h1>
-      <p>Enter your github username to fetch your repositories</p>
+      <p className="gitrepotext">Enter your github username to fetch your repositories</p>
       
       
       <CounterApp/>

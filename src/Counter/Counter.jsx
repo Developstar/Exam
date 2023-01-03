@@ -3,12 +3,16 @@ import useCounter from "../hooks/useCounter";
 import Gitinput from "../Components/GithubUserInput"
 
 
+
 const CounterApp = () => {
   const [state, increment, decrement, reset, setValue, inputRef] = useCounter();
+
+ 
   return(
     <>
+     
       <section>
-        <Gitinput/>
+         <Gitinput/> 
       </section>
     <section className="counterapp-container">
  <p className="counter-value">Numbers of Repositories you want to fetch: {state.count}</p>
@@ -22,7 +26,15 @@ const CounterApp = () => {
           <button  className="counter-btn" onClick={decrement}>Decrease</button>
           <button  className="counter-btn" onClick={reset}>Reset</button>
         </div>
+      
       </section>
+      <section>
+        <div>
+        <button  className="fetch-btn">Fetch Repo</button>
+      </div>
+      </section>
+       
+      
     </>
    );
  };
