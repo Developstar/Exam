@@ -20,7 +20,7 @@ const Home = () => {
         />
       </Helmet>
       <h1>Counter App</h1>
-      <p className="gitrepotext">Enter your github username to fetch your repositories</p>
+      
       
       
       <CounterApp/>

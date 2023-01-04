@@ -3,7 +3,7 @@ import { useRef } from "react";
 import useCounterReducer from "./counterReducer";
 
 const useCounter = (initialState) => {
-    const [state, dispatch] = useCounterReducer(initialState || { count: 0 });
+    const [state, dispatch] = useCounterReducer(initialState || { count: 1 });
 
     const inputRef = useRef(null);
     const userinputRef = useRef()

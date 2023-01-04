@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
+const GitFetchPage = lazy(()=> import("./Components/GithubFetchPage"));
 const Home = lazy(() => import("./HomePage/Home"));
 const ErrorBoundaryTest = lazy(() =>
   import("./ErrorBoundaryTest/ErrorBoundaryTest")
@@ -34,6 +35,8 @@ function App() {
     <div className="App">
       <HelmetProvider>
         <NavBar />
+        
+        
         <ErrorBoundary
           FallbackComponent={ErrorFallback}
           onReset={() => navigate("/")}
@@ -47,6 +50,9 @@ function App() {
               />
               <Route path="/404errortest" element={<ErrorPageTest />} />
               <Route path="*" element={<ErrorPageTest />} />
+              <Route path="./Components/GithubFetchPage" element={<GitFetchPage />} />
+              
+              
             </Routes>
           </Suspense>
         </ErrorBoundary>

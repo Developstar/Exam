@@ -10,27 +10,12 @@ const CounterApp = () => {
  
   return(
     <>
-    <section className="counterapp-container">
- <p className="counter-value">Numbers of Repositories you want to fetch: {state.count}</p>
-        <div>
-          <input ref={inputRef} type={"number"} placeholder={"Enter your number here"} name="value"  className="counterapp-text" />
-          
-        </div>
-        <div className="counterbtn-container">
-          <button  className="counter-btn" onClick={setValue}>Set Value</button>
-          <button  className="counter-btn" onClick={increment}>Increase</button>
-          <button  className="counter-btn" onClick={decrement}>Decrease</button>
-          <button  className="counter-btn" onClick={reset}>Reset</button>
-        </div>
-      
-      </section>
+   
       <section>
         <section>
          <Gitinput/> 
       </section>
-        <div>
-        <button  className="fetch-btn">Fetch Repo</button>
-      </div>
+        
       </section>
        
       

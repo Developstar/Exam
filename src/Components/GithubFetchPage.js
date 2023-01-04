@@ -1,7 +1,7 @@
 import React from 'react'
 
 const URL = 'https://api.github.com/users/Developstar/repos'
-export default function GitFetchPage(){
+export default function GithubFetchPage(){
   const [items, setItems] = useState([])
   const [users] = useState('Developstar')
 
