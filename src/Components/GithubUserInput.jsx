@@ -1,20 +1,27 @@
 import { useState, useRef } from "react"
 import useCounter from "../hooks/useCounter";
-import { Navigate, Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { NavLink } from "react-router-dom";
-
 
 
 export default function Gitinput(){
   const [state, increment, decrement, reset, setValue, inputRef] = useCounter();
-  
+const navigate = useNavigate();
+  const openProfile = (id)=>{
+    navigate("./GithubFetchPage",{
+      state:{
+        id: inputOne.current.value
+      }
+    })
+  }
 
+
+  
 const [repoNum, setRepoNum] = useState('')
 const getNum = ()=>{
   let numOfRepo = inputRef.current.value
   console.log(numOfRepo)
 }
-
   const getIncValue = ()=>{
     
     let increaseVal = state.count
@@ -35,11 +42,12 @@ const getText = ()=>{
   return(
     <>
       <section className="counterapp-container">
+        
  <p className="counter-value">Numbers of Repositories you want to fetch: {state.count}</p>
-        <div>
+      
           <input ref={inputRef} onChange={(e) => setRepoNum(e.target.value)}  value={repoNum} type={"number"} placeholder={"Enter your number here"} name="value"  className="counterapp-text" />
           
-        </div>
+        
         <div className="counterbtn-container">
           <button  className="counter-btn" onClick={setValue}>Set Value</button>
           <button  className="counter-btn" onClick={()=>{increment();getIncValue();}}>Increase</button>
@@ -55,25 +63,35 @@ const getText = ()=>{
 
       
       <p className="gitrepotext">Enter your github username to fetch your repositories</p>
-      <div>
+      
         
           <input ref={inputOne} onChange={(e) => setUserName(e.target.value)} value={userName}  type={"text"} placeholder={"Enter your github username"} name="value"  className="counterapp-text" /> 
-    </div>
+    
       <div>
         <button onClick={()=>{getNum();getText(); }} className="fetch-btn">Fetch Repo</button>
       </div>
 
       
            <NavLink
-        style={({ isActive }) =>
-          isActive ? { color: "green" } : { color: "black" }
-        }
+        
         to="./GithubFetchPage"
-        className="navlink-btn"
+        className="errorpage-link"
+        state={{
+          id: "Developstar"
+        }}
       >
         Error 404
       </NavLink>
-    
+    <Link
+      to="./GithubFetchPage"
+      state={{
+        id: "Developstar"
+      }}
+      >
+      Open Page
+      </Link>
+
+      <button onClick={openProfile}>Open Page</button>
     </>
   )
 }                                                                                                                                                                                                                                              

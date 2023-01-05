@@ -50,7 +50,7 @@ function App() {
               />
               <Route path="/404errortest" element={<ErrorPageTest />} />
               <Route path="*" element={<ErrorPageTest />} />
-              <Route path="./Components/GithubFetchPage" element={<GitFetchPage />} />
+              <Route path="/GithubFetchPage" element={<GitFetchPage />} />
               
               
             </Routes>
