@@ -14,7 +14,7 @@ const [items, setItems] = useState([])
 
   useEffect(()=>{
     const fetchRepos = async() =>{
-      const res = await fetch(`https://api.github.com/users/${users}/repos?page=1&per_page=6&sort=updated`)
+      const res = await fetch(`https://api.github.com/users/${location.state.id}/repos?page=1&per_page=${location.state.num}&sort=updated`)
       const data = await res.json()
       setItems(data)
     }
@@ -24,6 +24,7 @@ const [items, setItems] = useState([])
   return(
     <>
       <div>userName: {location.state.id}</div>
+      <div>RepoNum: {location.state.num}</div>
      
     {!items?<Loading/>:<>
     <section><h1>Viewing {users}'s Repository</h1></section>

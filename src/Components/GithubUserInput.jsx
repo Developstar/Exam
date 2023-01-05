@@ -7,10 +7,11 @@ import { NavLink } from "react-router-dom";
 export default function Gitinput(){
   const [state, increment, decrement, reset, setValue, inputRef] = useCounter();
 const navigate = useNavigate();
-  const openProfile = (id)=>{
+  const openProfile = (id,num)=>{
     navigate("./GithubFetchPage",{
       state:{
-        id: inputOne.current.value
+        id: inputOne.current.value,
+        num: inputRef.current.value
       }
     })
   }
