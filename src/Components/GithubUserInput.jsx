@@ -11,7 +11,7 @@ const navigate = useNavigate();
     navigate("./GithubFetchPage",{
       state:{
         id: inputOne.current.value,
-        num: inputRef.current.value
+        num: state.count
       }
     })
   }

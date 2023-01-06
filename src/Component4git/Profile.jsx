@@ -4,11 +4,13 @@ import React from "react";
 export default function Profile(props){
     return(
         <>
-        <article className='bg'>
-            <img src={props.owner.avatar_url} alt={props.owner.login} />
-            <div>
-                <h2>{props.owner.login}</h2>
-                <p>Repo Name: {props.name}</p>
+        <article >
+            
+            <div className='eachCom'>
+              <div ><img className='userImg'src={props.owner.avatar_url} alt={props.owner.login} /></div>
+              
+                 <h1>{props.owner.login}</h1>
+                <p className='repoDetails'>Repo Name: {props.name}</p>
                 <p>Language: {props.language}</p>
             </div>
             
@@ -18,3 +20,7 @@ export default function Profile(props){
         </>
     )
 }
+
+
+
+

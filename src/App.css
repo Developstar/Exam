@@ -233,3 +233,20 @@ p {
 }
 
 }
+
+
+.userImg{
+  border-radius: 50%
+}
+
+.eachCom{
+  margin-bottom: 1rem;
+  background: grey;
+  border-radius: 2rem;
+  width:30%;
+  margin:2rem auto;
+}
+
+.repoDetails{
+  font-size:1rem;
+}
