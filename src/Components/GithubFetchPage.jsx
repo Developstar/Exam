@@ -2,28 +2,6 @@ import React,{useState,useEffect} from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Loading from '../Component4git/Loading'
 import Profile from '../Component4git/Profile'
-const URL = 'https://api.github.com/users/Developstar/repos'
-
-const Image = () => {
-  const [avatarUrl, setAvatarUrl] = useState('');
-
-  useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(`https://api.github.com/users/${location.state.id}`);
-      const data = await res.json();
-      setAvatarUrl(data.avatar_url);
-    }
-    fetchData();
-  }, []);
-
-  return (
-    <img src={avatarUrl} alt="Repository owner's avatar" />
-  );
-}
-
-
-
-
 
 
 export default function GithubFetchPage(){
@@ -31,6 +9,9 @@ export default function GithubFetchPage(){
   console.log(location)
 const [items, setItems] = useState([])
   const [users] = useState('Developstar')
+  const source = 'https://github.com/'
+  const dynamic = `${location.state.id}`
+  const imgUrl = source + dynamic + '.png'
 
 
   useEffect(()=>{
@@ -41,39 +22,40 @@ const [items, setItems] = useState([])
     }
     fetchRepos()
   },[])
-  
+
   return(
     <>
       <div>userName: {location.state.id}</div>
       <div>RepoNum: {location.state.num}</div>
-      <Image />
      
-    {!items?<Loading/>:<>
+     
+
     <section>
-      
+    {!items?<Loading/>:
+      <>
+    <section>
       <h1>Viewing {location.state.id}'s Repository</h1>
-      
+      <div><img className='userImage' src={imgUrl} alt="Github user Image"/></div>
     </section>
 
-    <div>
+   
+      
       {items.map((item) =>(
       <section className='repoContainer'>
-        <div >
           <Profile key={item.id} {...item} />
-        </div>
-      </section>
-      
-        
+      </section> 
       ))}
       
-    </div>
-    </>  }
     
-      <p>
-        <Link className="errorpage-link" to="/">
+    </>  }
+      </section>
+
+      
+      <section>
+        < Link className="errorpage-link" to="/">
           Back Home
         </Link>
-      </p>
+      </section>  
     </>
   )
 }

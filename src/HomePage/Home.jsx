@@ -19,7 +19,7 @@ const Home = () => {
           content="A simple counter app built using custom hooks and useReducer in React JS."
         />
       </Helmet>
-      <h1>Counter App</h1>
+      <h1 className='Page-title'>Github Repository Fetcher App</h1>
       
       
       

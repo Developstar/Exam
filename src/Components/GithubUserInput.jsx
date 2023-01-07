@@ -43,8 +43,8 @@ const getText = ()=>{
   return(
     <>
       <section className="counterapp-container">
-        
- <p className="counter-value">Numbers of Repositories you want to fetch: {state.count}</p>
+        <section className="counter">
+ <p className="intro">Numbers of Repositories you want to fetch: {state.count}</p>
       
           <input ref={inputRef} onChange={(e) => setRepoNum(e.target.value)}  value={repoNum} type={"number"} placeholder={"Enter your number here"} name="value"  className="counterapp-text" />
           
@@ -55,11 +55,9 @@ const getText = ()=>{
           <button  className="counter-btn" onClick={decrement}>Decrease</button>
           <button  className="counter-btn" onClick={reset}>Reset</button>
         </div>
+      </section>
       
-      </section>
-      <section>
-        
-      </section>
+      
        
 
       
@@ -68,31 +66,12 @@ const getText = ()=>{
         
           <input ref={inputOne} onChange={(e) => setUserName(e.target.value)} value={userName}  type={"text"} placeholder={"Enter your github username"} name="value"  className="counterapp-text" /> 
     
-      <div>
-        <button onClick={()=>{getNum();getText(); }} className="fetch-btn">Fetch Repo</button>
-      </div>
+
+        <div>
+          <button className= "fetch-btn"  onClick={openProfile}>Fetch Repo</button>        </div>
 
       
-           <NavLink
-        
-        to="./GithubFetchPage"
-        className="errorpage-link"
-        state={{
-          id: "Developstar"
-        }}
-      >
-        Error 404
-      </NavLink>
-    <Link
-      to="./GithubFetchPage"
-      state={{
-        id: "Developstar"
-      }}
-      >
-      Open Page
-      </Link>
-
-      <button onClick={openProfile}>Open Page</button>
+        </section>
     </>
   )
 }                                                                                                                                                                                                                                              

@@ -72,9 +72,16 @@ p {
 }
 
 /* Counter styling... */
+.counter{
+  
+}
+
+.Page-title{
+  font-size:2rem
+}
 .counter-btn {
   margin: 10px;
-  padding: 2rem 3.5rem;
+  padding: 1rem 3.5rem;
   background-color: #008631;
   color: white;
   font-size: 1rem;
@@ -97,14 +104,16 @@ p {
   max-width: 80%;
   margin: 2rem auto;
   border-radius: 2rem;
-  height: 80vh
+  height: 80vh;
+  background: #bcf29c
   
 
   
 }
 
 .counterapp-container p {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  padding-top: 1.5rem;
 }
 
 .counterapp-text {
@@ -114,7 +123,8 @@ p {
   border-radius: 10px;
   font-size: 30px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .fetch-btn {
@@ -197,7 +207,7 @@ p {
     font-size: 1rem;
   }
   
-.counter-value{
+.intro{
   font-size: 2px;
 }
 
@@ -241,12 +251,24 @@ p {
 
 .eachCom{
   margin-bottom: 1rem;
-  background: grey;
+  background: #90EE90;
   border-radius: 2rem;
   width:30%;
   margin:2rem auto;
+  
 }
 
 .repoDetails{
   font-size:1rem;
+  
+}
+
+.userImage{
+  border-radius:50%;
+  width:20rem;
+}
+
+article{
+  display: flex;
+  flex-direction: row
 }
