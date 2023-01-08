@@ -1,18 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 export default function Profile(props){
+  const source = 'https://github.com/'
+  const dynamic = `${props.full_name}`
+  const imgUrl = source + dynamic 
     return(
         <>
-        <article >
+        <section className='repo-info' >
             
             <div className='eachCom'>
-                 <h1>{props.owner.login}</h1>
                 <p className='repoDetails'>Repo Name: {props.name}</p>
-                <p>Language: {props.language}</p>
+                <p className='repoDetails'>Language: {props.language}</p>
+              <p className='repoDetails'>Branch:{props.default_branch}</p>
+              <a href={imgUrl}>see more details</a>
             </div>
+           
             
-        </article>
+        </section>
      
         
         </>

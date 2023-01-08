@@ -157,7 +157,28 @@ p {
   opacity: 40%;
 }
 
+.repoContainer{
+  width: 80%;
+  margin: auto
+}
 
+.repo-wrapper{
+  display:flex;
+  flex-direction: column;
+}
+
+.repo-info{
+ border-radius: 2rem;
+}
+
+.eachCom{
+   margin-bottom: 1rem;
+  background: #90EE90;
+  border-radius: 1rem;
+  height:6rem;
+  
+  margin:2rem auto;
+}
 /* Homepage styling... */
 .homepage-container h1 {
   margin: 2rem 0;
@@ -250,11 +271,7 @@ p {
 }
 
 .eachCom{
-  margin-bottom: 1rem;
-  background: #90EE90;
-  border-radius: 2rem;
-  width:30%;
-  margin:2rem auto;
+ 
   
 }
 
@@ -263,12 +280,13 @@ p {
   
 }
 
+.userInputInfo{
+  margin: 2rem;
+}
+
+
 .userImage{
   border-radius:50%;
   width:20rem;
 }
 
-article{
-  display: flex;
-  flex-direction: row
-}

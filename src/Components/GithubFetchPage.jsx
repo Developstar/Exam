@@ -25,20 +25,19 @@ const [items, setItems] = useState([])
 
   return(
     <>
-      <div>userName: {location.state.id}</div>
+      <section className='userInputInfo'>
+        <div>Github Username: {location.state.id}</div>
       <div>RepoNum: {location.state.num}</div>
+      </section>
      
      
-
-    <section>
-    {!items?<Loading/>:
-      <>
-    <section>
-      <h1>Viewing {location.state.id}'s Repository</h1>
+      <section>
       <div><img className='userImage' src={imgUrl} alt="Github user Image"/></div>
     </section>
 
-   
+    <section className='repo-wrapper'>
+    {!items?<Loading/>:
+      <>
       
       {items.map((item) =>(
       <section className='repoContainer'>
