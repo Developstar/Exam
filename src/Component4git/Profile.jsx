@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 
 export default function Profile(props){
@@ -12,15 +11,15 @@ export default function Profile(props){
             
             <div className='eachCom'>
                 <p className='repoDetails'>Repo Name: {props.name}</p>
-                <p className='repoDetails'>Language: {props.language}</p>
+                <p className='repoDetails'>Language:{props.language}</p>
               <p className='repoDetails'>Branch:{props.default_branch}</p>
-              <a href={imgUrl}>see more details</a>
-            </div>
-           
-            
+              <p className='repoDetails' >Description:{props.description}</p>
+              
+              <div className='button-click'>
+                <a style={{ color: 'black', background:'white', textDecoration: 'none', border: '0.1rem solid black', borderRadius:'0.4rem', padding:'0.3rem'}} href={imgUrl}>see more details</a>
+              </div>
+              </div>  
         </section>
-     
-        
         </>
     )
 }

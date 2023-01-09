@@ -2,7 +2,7 @@ import "./App.css";
 import { lazy, Suspense } from "react";
 import NavBar from "./Components/NavBar";
 
-import { Navigate, Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ErrorBoundary } from "react-error-boundary";
 import { useNavigate } from "react-router-dom";
@@ -51,8 +51,6 @@ function App() {
               <Route path="/404errortest" element={<ErrorPageTest />} />
               <Route path="*" element={<ErrorPageTest />} />
               <Route path="/GithubFetchPage" element={<GitFetchPage />} />
-              
-              
             </Routes>
           </Suspense>
         </ErrorBoundary>
